@@ -1,0 +1,42 @@
+h1 Sincronizando mudanças
+h2 
+  |Se você verificar o 
+  a target="_blank" href="https://github.com/diogob/git-tutorial" repositório original
+p
+  |Perceberá que suas mudanças não estão lá, todas as modificações foram feitas em um repositório local, o clone.
+p
+  |Vocês não têm permissão de modificar o repositório central, logo vamos criar outro clone no github
+  |Na página do repositório usem o botão 
+  b fork
+
+p
+  |O botão faz a mesma coisa que o git clone, ele cria outro clone nos servidores do github, agora temos três repositórios.
+p
+  |No repositório local chamamos um repositório remoto de ... 
+  b remote
+p
+  | Quando fazemos um clone o git cria um remote chamado 
+  b origin
+p
+  | Para ver os repositórios remotos use o comando
+xmp
+  |git remote
+p
+  |Para adicionar o seu fork como remote use o comando:
+xmp
+  |git remote add meu_repo git@github.com:<git user>/git-tutorial.git
+p
+  |E para enviar as mudanças para o seu repositório:
+xmp
+  |git push meu_repo master:master
+p
+  |Agora vamos buscar modificações feitas em outro branch do repositório original
+xmp
+  |git pull origin new_sync_page
+p
+  |Esse comando sincroniza as alterações feitas no repositório original (no branch new_sync_page) e pode trazer conflitos!
+p
+  |Se aparecerem conflitos não se preocupem, vamos resolver isso mais tarde, agora 
+  a href="/pages/stashing" podemos prosseguir o tutorial
+
+
