@@ -2,6 +2,23 @@ h1 Stashing
 p
   |Digamos que estamos trabalhando no seguinte template:
 iframe src="/pages/wip" style="width: 640px; height: 480px;"
+p
+  |Modifique a linha 2 do template em views/wip.html.slim, salve as modificações e não faça um commit.
+p
+  |Essas modificações não foram encerradas, logo você não quer criar um commit com elas, mas gostaria de atualizar o seu trabalho em andamento com modificações feitas no branch experimental.
+p
+  |Para isso execute:
+xmp
+  |git pull origin experimental
+p
+  |Se houver algum problema durante o pull, poderemos guardar as modificações atuais sem criar um commit com o comando
+  b stash
+xmp
+  |git stash
+p
+  |Depois executamos o pull novamente e depois do merge aplicamos o stash
+xmp
+  |git stash apply
 
 p
   a href="/pages/bisect" podemos prosseguir o tutorial
