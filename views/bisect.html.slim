@@ -6,3 +6,10 @@ p
 p
   |No iframe abaixo temos um template com problema. Sem nos preocuparmos em corrigi-lo agora ou saber emq ue arquivo está o erro, vamos encontrar o commit em que o problema aparece!
 iframe src="/pages/error" style="width: 640px; height: 480px;"
+p
+  |Com o git bisect podemos encontrar o commit exato em que um erro foi introduzido no código e assim facilitar o rastramento de bugs em grandes bases de código.
+p
+  |Começamos com o comando
+xmp
+  |git bisect start
+
