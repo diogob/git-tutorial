@@ -3,5 +3,9 @@ require 'bundler/setup'
 Bundler.require
 
 get '/' do
-  "Hello World"
+  redirect to('/pages/welcome')
+end
+
+get '/pages/:current_page' do
+  Tilt.new("views/#{params[:current_page]}.html.slim").render
 end
