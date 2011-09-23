@@ -1,0 +1,28 @@
+h1 Modificando o código
+h2 Entre na pasta do clone do repositório e deixe uma mensagem aqui:
+p
+  |Mensagem bacana para o mundo!
+p
+  |Depois, na pasta do tutorial crie uma nova página que será acessada 
+  a href="new_page" nesse link
+xmp 
+  |vi views/new_page.html.slim
+p
+  |Depois, para ver as mudaças use um 
+  b git status
+p
+  |Note que existe uma diferença entre arquivos que já estavam no repositório e novos arquivos
+  |Para fazer o commit de um arquivo específico que já esteja no repositório, podemos pular o staging usando o comando:
+xmp
+  |git commit views/modifications.html.slim -m "adicionando mensagem bacana"
+p
+  |No entanto isso não funciona com arquivos que ainda não estejam no repositório, esses precisam ser adicionados:
+xmp
+  |git add views/new_page.html.slim
+  |git commit -m "criando minha pagina totalmente criativa"
+p
+  |OBS.: Não use ! em mensagens de commit
+
+p
+  a href="/pages/sync" podemos prosseguir o tutorial
+
